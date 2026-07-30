@@ -107,6 +107,24 @@ export function PricingSection() {
           </div>
         </div>
 
+        {/* Billing toggle */}
+        <div className={`flex justify-center mb-12 transition-all duration-700 delay-200 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+          <div className="inline-flex items-center p-1 border border-foreground/10 font-mono text-sm">
+            <button
+              onClick={() => setIsAnnual(false)}
+              className={`px-6 py-2.5 transition-all ${!isAnnual ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"}`}
+            >
+              Monthly
+            </button>
+            <button
+              onClick={() => setIsAnnual(true)}
+              className={`px-6 py-2.5 transition-all ${isAnnual ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"}`}
+            >
+              Annual <span className="text-[#eca8d6]">−21%</span>
+            </button>
+          </div>
+        </div>
+
         {/* Pricing cards - Horizontal layout with overlap */}
         <div className="relative">
           <div className="grid lg:grid-cols-3 gap-4 lg:gap-0">

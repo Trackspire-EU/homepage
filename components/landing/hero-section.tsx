@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { ArrowRight } from "lucide-react";
 
 const words = ["understand", "measure", "protect", "respect"];
 
@@ -167,7 +168,7 @@ export function HeroSection() {
       <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-12 py-32 lg:py-40">
         <div className="lg:max-w-[55%]">
         {/* Eyebrow */}
-        <div 
+        <div
           className={`mb-8 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
@@ -177,10 +178,10 @@ export function HeroSection() {
             Open Source · Privacy-First · GDPR Compliant
           </span>
         </div>
-        
+
         {/* Main headline */}
-        <div className="mb-12">
-          <h1 
+        <div className="mb-10">
+          <h1
             className={`text-left text-[clamp(2rem,6vw,7rem)] font-display leading-[0.92] tracking-tight text-white transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
@@ -191,6 +192,25 @@ export function HeroSection() {
               <span className="text-white/30">your users</span>
             </span>
           </h1>
+        </div>
+
+        {/* CTA buttons */}
+        <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-300 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+        }`}>
+          <a
+            href="https://app.trackspire.eu/register"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black text-sm font-medium hover:bg-white/90 transition-colors group"
+          >
+            Get started free
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </a>
+          <a
+            href="https://docs.trackspire.eu"
+            className="inline-flex items-center gap-2 px-8 py-4 border border-white/20 text-white text-sm font-medium hover:border-white/50 hover:bg-white/5 transition-colors"
+          >
+            View docs
+          </a>
         </div>
         </div>
       </div>

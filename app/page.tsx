@@ -8,8 +8,10 @@ import { IntegrationsSection } from "@/components/landing/integrations-section";
 import { SecuritySection } from "@/components/landing/security-section";
 import { DevelopersSection } from "@/components/landing/developers-section";
 import { PricingSection } from "@/components/landing/pricing-section";
+import { FaqSection } from "@/components/landing/faq-section";
 import { CtaSection } from "@/components/landing/cta-section";
 import { FooterSection } from "@/components/landing/footer-section";
+import { ScrollToTop } from "@/components/landing/scroll-to-top";
 
 export default function Home() {
   return (
@@ -24,8 +26,10 @@ export default function Home() {
       <SecuritySection />
       <DevelopersSection />
       <PricingSection />
+      <FaqSection />
       <CtaSection />
       <FooterSection />
+      <ScrollToTop />
     </main>
   );
 }

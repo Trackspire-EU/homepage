@@ -10,6 +10,7 @@ const navLinks = [
   { name: "Integrations",  href: "#integrations"  },
   { name: "Security",      href: "#security"      },
   { name: "Pricing",       href: "#pricing"       },
+  { name: "FAQ",           href: "#faq"           },
 ];
 
 export function Navigation() {

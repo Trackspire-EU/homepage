@@ -220,6 +220,25 @@ export function FeaturesSection() {
               <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent" />
             </div>
           </div>
+
+          {/* Features 02 – 04 */}
+          {features.slice(1).map((feature, i) => (
+            <div
+              key={feature.number}
+              className={`lg:col-span-4 relative border border-foreground/10 p-8 lg:p-10 overflow-hidden transition-all duration-700 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+              }`}
+              style={{ transitionDelay: `${(i + 1) * 100}ms` }}
+            >
+              <span className="font-mono text-sm text-muted-foreground">{feature.number}</span>
+              <h3 className="text-2xl lg:text-3xl font-display mt-4 mb-4">{feature.title}</h3>
+              <p className="text-base text-muted-foreground leading-relaxed mb-10">{feature.description}</p>
+              <div>
+                <span className="text-4xl lg:text-5xl font-display">{feature.stats.value}</span>
+                <span className="block text-sm text-muted-foreground font-mono mt-2">{feature.stats.label}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
