@@ -1,0 +1,8 @@
+services:
+  landing:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      platforms:
+        - linux/amd64
+    image: ghcr.io/luka-lta/trackspire/trackspire-frontend:production
