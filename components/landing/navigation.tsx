@@ -46,9 +46,8 @@ export function Navigation() {
           }`}
         >
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2.5 group">
-            <img src="/logo.png" alt="Trackspire" width={28} height={28} className="size-7 transition-opacity group-hover:opacity-90" />
-            <span className={`font-bold tracking-tight transition-all duration-500 ${isScrolled ? "text-lg text-foreground" : "text-xl text-white"}`}>Trackspire</span>
+          <a href="#" className="flex items-center group">
+            <img src="/logo.png" alt="Trackspire" height={40} className="h-30 w-auto transition-opacity group-hover:opacity-90" />
           </a>
 
           {/* Desktop Navigation */}

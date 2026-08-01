@@ -112,9 +112,8 @@ export function FooterSection() {
           <div className="grid grid-cols-2 md:grid-cols-6 gap-12 lg:gap-8">
             {/* Brand Column */}
             <div className="col-span-2">
-              <a href="/" className="inline-flex items-center gap-2.5 mb-6 group">
-                <img src="/logo.png" alt="Trackspire" width={28} height={28} className="size-7 transition-opacity group-hover:opacity-90" />
-                <span className="text-xl font-bold text-white tracking-tight">Trackspire</span>
+              <a href="/" className="inline-flex items-center mb-6 group">
+                <img src="/logo.png" alt="Trackspire" height={40} className="h-30 w-auto transition-opacity group-hover:opacity-90" />
               </a>
 
               <p className="text-white/50 leading-relaxed mb-8 max-w-xs text-sm">
