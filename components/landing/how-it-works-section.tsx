@@ -7,7 +7,7 @@ const steps = [
     number: "01",
     title: "Embed",
     subtitle: "one script tag",
-    description: "Add a single script tag to your site. No build step, no configuration, no cookie consent required.",
+    description: "Add a single script tag to your site. No build step, no configuration, no cookies set.",
     code: `<!-- Add to your <head> -->
 <script
   src="https://api.trackspire.eu/script.js"
@@ -32,7 +32,7 @@ const steps = [
     number: "03",
     title: "Understand",
     subtitle: "your audience",
-    description: "Open your dashboard and see real-time visitor data. No personal data collected. No cookie banner needed.",
+    description: "Open your dashboard and see real-time visitor data. No cookies, no user profiles.",
     code: `// Optional: JS API for dynamic events
 window.trackspire.track('checkout', {
   plan: 'pro',

@@ -58,7 +58,7 @@ export function CtaSection() {
 
                 <p className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
                   Join teams who get real analytics without compromising their users&apos; trust.
-                  Embed in 30 seconds. No cookie banner needed.
+                  Embed in 30 seconds. No cookies set.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-start gap-4">

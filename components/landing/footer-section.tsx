@@ -163,9 +163,23 @@ export function FooterSection() {
 
         {/* Bottom Bar */}
         <div className="py-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-white/30">
-            &copy; 2026 Trackspire. All rights reserved.
-          </p>
+          <div className="text-center md:text-left">
+            <p className="text-sm text-white/30">
+              &copy; 2026 Trackspire. All rights reserved.
+            </p>
+            <p className="mt-1 text-xs text-white/30">
+              This product includes GeoLite2 data created by MaxMind, available from{" "}
+              <a
+                href="https://www.maxmind.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-white transition-colors"
+              >
+                https://www.maxmind.com
+              </a>
+              .
+            </p>
+          </div>
 
           <div className="flex items-center gap-4 text-sm text-white/30">
             <span className="flex items-center gap-2">

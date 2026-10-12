@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function ImprintPage() {
   return (
-    <LegalLayout title="Impressum" lastUpdated="Juli 2026">
-      <h2>Angaben gemäß § 5 TMG</h2>
+    <LegalLayout title="Impressum" lastUpdated="Oktober 2026">
+      <h2>Angaben gemäß § 5 DDG</h2>
       <p>
         Luka Dev Studio<br />
         Inh. Luka Liebenthal<br />
@@ -30,24 +30,16 @@ export default function ImprintPage() {
         Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).
       </p>
 
-      <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+      <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
       <p>
         Luka Liebenthal<br />
         Koppenstraße 13, 31785 Hameln
       </p>
 
-      <h2>EU-Streitschlichtung</h2>
-      <p>
-        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS)
-        bereit:{" "}
-        <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">
-          https://ec.europa.eu/consumers/odr/
-        </a>
-        . Unsere E-Mail-Adresse finden Sie oben.
-      </p>
+      <h2>Verbraucherstreitbeilegung</h2>
       <p>
         Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
-        Verbraucherschlichtungsstelle teilzunehmen.
+        Verbraucherschlichtungsstelle teilzunehmen (§ 36 VSBG).
       </p>
     </LegalLayout>
   );

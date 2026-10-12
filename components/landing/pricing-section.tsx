@@ -32,7 +32,7 @@ const plans = [
       "API access",
       "Team members",
     ],
-    cta: "Start free trial",
+    cta: "Get started",
     ctaHref: "https://app.trackspire.eu/register",
     highlight: true,
   },
@@ -205,6 +205,12 @@ export function PricingSection() {
           </div>
         </div>
 
+        <p className="mt-8 text-center text-xs text-muted-foreground">
+          All prices in EUR. No VAT is charged due to the small business regulation (§ 19 UStG).
+          The Pro plan renews automatically until cancelled. See our{" "}
+          <a href="/terms" className="underline underline-offset-2 hover:text-foreground">terms</a>.
+        </p>
+
         {/* Bottom note with icons */}
         <div className={`mt-20 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 pt-12 border-t border-foreground/10 transition-all duration-1000 delay-500 ${
           isVisible ? "opacity-100" : "opacity-0"
@@ -216,11 +222,11 @@ export function PricingSection() {
             </span>
             <span className="flex items-center gap-2">
               <Check className="w-4 h-4 text-[#eca8d6]" />
-              GDPR compliant
+              Made in the EU
             </span>
             <span className="flex items-center gap-2">
               <Check className="w-4 h-4 text-[#eca8d6]" />
-              Cancel anytime
+              Cancel before renewal
             </span>
           </div>
           <a href="https://docs.trackspire.eu" className="text-sm underline underline-offset-4 hover:text-foreground transition-colors">

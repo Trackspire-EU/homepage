@@ -66,7 +66,7 @@ export function Navigation() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <a href="https://app.trackspire.eu/login" className={`transition-all duration-500 ${isScrolled ? "text-xs text-foreground/70 hover:text-foreground" : "text-sm text-white/70 hover:text-white"}`}>
+            <a href="https://app.trackspire.eu/" className={`transition-all duration-500 ${isScrolled ? "text-xs text-foreground/70 hover:text-foreground" : "text-sm text-white/70 hover:text-white"}`}>
               Login
             </a>
             <Button
@@ -137,7 +137,7 @@ export function Navigation() {
               onClick={() => setIsMobileMenuOpen(false)}
               asChild
             >
-              <a href="https://app.trackspire.eu/login">Login</a>
+              <a href="https://app.trackspire.eu/">Login</a>
             </Button>
             <Button
               className="flex-1 bg-foreground text-background rounded-full h-14 text-base"
