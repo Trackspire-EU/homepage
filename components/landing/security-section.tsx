@@ -7,7 +7,7 @@ const securityFeatures = [
   {
     icon: Cookie,
     title: "Zero cookies",
-    description: "No cookies set, ever. No consent banner required.",
+    description: "No cookies set. Built to work without a consent banner.",
     image: "/images/isolated.jpg",
   },
   {
@@ -25,12 +25,12 @@ const securityFeatures = [
   {
     icon: Globe,
     title: "EU data residency",
-    description: "All data stored on servers in the European Union.",
+    description: "All data stored on servers in Germany.",
     image: "/images/permissions.jpg",
   },
 ];
 
-const certifications = ["GDPR", "CCPA", "PECR", "ePrivacy"];
+const regulations = ["GDPR", "CCPA", "PECR", "ePrivacy"];
 
 export function SecuritySection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -112,13 +112,13 @@ export function SecuritySection() {
               <span className="font-mono text-sm text-muted-foreground">Active protection</span>
               <div className="mt-8">
                 <span className="text-7xl lg:text-8xl font-display">0</span>
-                <span className="block text-muted-foreground mt-2">Personal data records stored</span>
+                <span className="block text-muted-foreground mt-2">Raw IP addresses stored</span>
               </div>
             </div>
             
-            {/* Certification badges */}
+            {/* Regulations this product is designed for (not certifications) */}
             <div className="absolute bottom-8 left-8 right-8 flex flex-wrap gap-2">
-              {certifications.map((cert, index) => (
+              {regulations.map((cert, index) => (
                 <span
                   key={cert}
                   className={`px-3 py-1 border border-foreground/10 text-xs font-mono text-muted-foreground transition-all duration-500 ${

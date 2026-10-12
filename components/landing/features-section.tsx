@@ -12,7 +12,7 @@ const features = [
   {
     number: "02",
     title: "Privacy by Design",
-    description: "No cookies, no fingerprinting. IP addresses are anonymized before storage. GDPR, CCPA, and PECR compliant out of the box.",
+    description: "No cookies, no fingerprinting. IP addresses are anonymized before storage. Designed to meet GDPR, CCPA, and PECR requirements.",
     stats: { value: "0 cookies", label: "ever set" },
   },
   {

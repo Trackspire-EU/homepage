@@ -10,14 +10,14 @@ const faqs = [
       "Instead of storing identifiers on devices, Trackspire derives a daily-rotating, anonymized hash from the visitor's IP address and User-Agent string. The raw values are never stored. The hash resets every 24 hours, making it technically impossible to track individual users across sessions.",
   },
   {
-    question: "Is Trackspire GDPR, CCPA, and PECR compliant?",
+    question: "Is Trackspire built for GDPR, CCPA, and PECR?",
     answer:
-      "Yes. Since no personal data is collected and no cookies or persistent identifiers are set, Trackspire falls outside the scope of consent requirements under GDPR, CCPA, and PECR. Most teams can remove their cookie banners entirely when switching to Trackspire.",
+      "Trackspire is designed for privacy-friendly analytics: no cookies, no persistent identifiers, and no raw IP storage. Whether a cookie banner or other obligations apply to your site depends on your own setup, so please check with your data protection officer or legal counsel. We provide a data processing agreement (DPA) on request.",
   },
   {
     question: "What data do you actually collect?",
     answer:
-      "Page URL, referrer, browser family, OS, device type, screen size, country (derived from anonymized IP — never stored raw), and custom events you explicitly define. No email addresses, no names, no persistent IDs.",
+      "Page URL, referrer, browser family, OS, device type, screen size, approximate location (country, region and city, looked up from the IP address on our own servers — the IP itself is never stored raw or sent to a third party), and custom events you explicitly define. No email addresses, no names, no persistent IDs. Because the daily hash is derived from IP address and User-Agent, we treat this data as personal data under the GDPR and process it on your behalf.",
   },
   {
     question: "Can I self-host Trackspire?",
@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "What happens to my data if I cancel?",
     answer:
-      "You can export all your data as CSV or JSON at any time from the dashboard. After cancellation, your data is retained for 30 days during which you can still export, then permanently deleted.",
+      "You can export all your data as CSV or JSON at any time from the dashboard. After cancellation, your analytics data is retained for 30 days during which you can still export, then permanently deleted. Account data is deleted within 90 days unless legal retention duties apply.",
   },
 ];
 

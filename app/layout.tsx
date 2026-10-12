@@ -1,7 +1,6 @@
 import React from "react"
 import type { Metadata } from 'next'
 import { Instrument_Sans, Instrument_Serif, JetBrains_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
 import Script from 'next/script'
 import './globals.css'
 
@@ -29,7 +28,7 @@ export const metadata: Metadata = {
     default: 'Trackspire — Privacy-First Web Analytics',
     template: '%s — Trackspire',
   },
-  description: 'Open-source, privacy-first web analytics. No cookies, no fingerprinting, no personal data. GDPR compliant out of the box. Embed in 30 seconds.',
+  description: 'Open-source, privacy-first web analytics. No cookies, no fingerprinting, no user profiles. Built for GDPR-friendly analytics. Embed in 30 seconds.',
   keywords: ['web analytics', 'privacy analytics', 'GDPR analytics', 'cookie-free analytics', 'open source analytics', 'no cookies', 'trackspire'],
   authors: [{ name: 'Luka Dev Studio', url: SITE_URL }],
   creator: 'Luka Dev Studio',
@@ -45,7 +44,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: 'Trackspire',
     title: 'Trackspire — Privacy-First Web Analytics',
-    description: 'Open-source, privacy-first web analytics. No cookies, no fingerprinting, GDPR compliant. Embed in 30 seconds.',
+    description: 'Open-source, privacy-first web analytics. No cookies, no fingerprinting. Built for GDPR-friendly analytics. Embed in 30 seconds.',
     images: [
       {
         url: '/og-image.png',
@@ -58,7 +57,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Trackspire — Privacy-First Web Analytics',
-    description: 'Open-source, privacy-first web analytics. No cookies, no fingerprinting, GDPR compliant. Embed in 30 seconds.',
+    description: 'Open-source, privacy-first web analytics. No cookies, no fingerprinting. Built for GDPR-friendly analytics. Embed in 30 seconds.',
     images: ['/og-image.png'],
     creator: '@trackspire',
   },
@@ -79,7 +78,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
         {children}
-        <Analytics />
         {process.env.NODE_ENV === 'production' && (
           <Script
             defer

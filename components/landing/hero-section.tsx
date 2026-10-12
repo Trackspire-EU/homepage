@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 const words = ["understand", "measure", "protect", "respect"];
 
@@ -175,7 +176,7 @@ export function HeroSection() {
         >
           <span className="inline-flex items-center gap-3 text-sm font-mono text-white/60">
             <span className="w-8 h-px bg-white/30" />
-            Open Source · Privacy-First · GDPR Compliant
+            Open Source · Privacy-First · Made in the EU
           </span>
         </div>
 
@@ -211,6 +212,28 @@ export function HeroSection() {
           >
             View docs
           </a>
+          <Dialog>
+            <DialogTrigger asChild>
+              <button
+                type="button"
+                className="inline-flex items-center gap-2 px-8 py-4 text-white/70 text-sm font-medium hover:text-white transition-colors group"
+              >
+                <Play className="w-4 h-4" />
+                Watch intro
+              </button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-4xl p-0 bg-black border-white/10 overflow-hidden">
+              <DialogTitle className="sr-only">Trackspire intro video</DialogTitle>
+              {/* Mounted only while open, so nothing is loaded before the click */}
+              <iframe
+                className="w-full aspect-video bg-black"
+                src="/intro/trackspire-intro.html"
+                title="Trackspire intro"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+              />
+            </DialogContent>
+          </Dialog>
         </div>
         </div>
       </div>

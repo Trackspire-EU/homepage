@@ -4,20 +4,6 @@ import { useEffect, useState, useRef } from "react";
 
 const metrics = [
   {
-    value: 48291047,
-    suffix: "",
-    prefix: "",
-    label: "Pageviews tracked today",
-    sublabel: "across all monitored sites",
-  },
-  {
-    value: 99,
-    suffix: ".9%",
-    prefix: "",
-    label: "Uptime",
-    sublabel: "collector & dashboard SLA",
-  },
-  {
     value: 10,
     suffix: "ms",
     prefix: "<",
@@ -217,15 +203,8 @@ function DotGraph({
 }
 
 export function MetricsSection() {
-  const [time, setTime] = useState<Date | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    setTime(new Date());
-    const interval = setInterval(() => setTime(new Date()), 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -246,16 +225,6 @@ export function MetricsSection() {
         {/* Header */}
         <div className="grid lg:grid-cols-12 gap-8 mb-20 lg:mb-32">
           <div className="lg:col-span-8 lg:col-start-1">
-            <div className="flex items-center gap-4 mb-6">
-              <span className="flex items-center gap-2 px-3 py-1 bg-[#eca8d6]/10 text-[#eca8d6] text-xs font-mono">
-                <span className="w-2 h-2 rounded-full bg-[#eca8d6] animate-pulse" />
-                LIVE
-              </span>
-              <span className="text-sm font-mono text-muted-foreground">
-                {time ? `${time.toLocaleTimeString("en-GB")} UTC` : ""}
-              </span>
-            </div>
-
             <h2 className={`text-6xl md:text-7xl lg:text-[140px] font-display tracking-tight leading-[0.95] transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}>
@@ -330,9 +299,9 @@ export function MetricsSection() {
         }`}>
           <span>No cookies</span>
           <span>No fingerprinting</span>
-          <span>No personal data</span>
+          <span>No user profiles</span>
           <span>IP anonymization</span>
-          <span className="text-foreground">GDPR · CCPA · PECR</span>
+          <span className="text-foreground">Built for GDPR · CCPA · PECR</span>
         </div>
       </div>
     </section>
